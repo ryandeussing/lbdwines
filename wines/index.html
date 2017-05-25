@@ -1,0 +1,129 @@
+---
+title: Our Wines
+first_image_path: /assets/images/wine-square-2.jpg
+second_image_path: /assets/images/wine-square-1.jpg
+description: Approachable, affordable, and delicious wines for every occasion.
+---
+
+{% assign wines = site.wines %}
+{% assign wines = wines|sort: 'sort_order' %}
+{% assign size = wines|size %}
+
+{% if size >= 1 %}
+  {% assign grid1 = true %}
+{% endif %}
+{% if size >= 5 %}
+  {% assign grid2 = true %}
+{% endif %}
+{% if size >= 9 %}
+  {% assign grid3 = true %}
+{% endif %}
+
+<main id="wines" class="wines scene_element scene_element--fadein">
+
+  <section class="headline">
+    <div class="container">
+      <div class="inner">
+        <h1 class="editable">The Wines</h1>
+        <p class="editable">No set plans. No dress code. Pick yours and make the night.</p>
+      </div>
+    </div>
+  </section>
+
+  {% if grid1 %}
+  <section class="products grid1">
+    <div class="container">
+    {% if wines[0] %}
+      <div class="product">
+        <a href="{{ wines[0].url }}">
+        <img src="{{wines[0].image_path}}" alt="">
+        </a>
+        <h2>{{wines[0].title}}</h2>
+        <h5>{{wines[0].origin}}</h5>
+      </div>
+    {% endif %}
+    {% if wines[1] %}
+      <div class="product">
+        <a href="{{ wines[1].url }}">
+        <img src="{{wines[1].image_path}}" alt="">
+        </a>
+        <h2>{{wines[1].title}}</h2>
+        <h5>{{wines[1].origin}}</h5>
+      </div>
+    {% endif %}
+    {% if wines[2] %}
+      <div class="product">
+        <a href="{{ wines[2].url }}">
+        <img src="{{wines[2].image_path}}" alt="">
+        </a>
+        <h2>{{wines[2].title}}</h2>
+        <h5>{{wines[2].origin}}</h5>
+      </div>
+    {% endif %}
+    {% if wines[3] %}
+      <div class="product">
+        <a href="{{ wines[3].url }}">
+        <img src="{{wines[3].image_path}}" alt="">
+        </a>
+        <h2>{{wines[3].title}}</h2>
+        <h5>{{wines[3].origin}}</h5>
+      </div>
+    {% endif %}
+    <img class="breakout" src="{{page.first_image_path}}" alt="">
+    </div>
+  </section>
+  {% endif %}
+
+  {% if grid2 %}
+  <section class="products grid2">
+  <div class="container">
+    {% if wines[4] %}
+      <div class="product">
+        <a href="{{ wines[4].url }}">
+        <img src="{{wines[4].image_path}}" alt="">
+        </a>
+        <h2>{{wines[4].title}}</h2>
+        <h5>{{wines[4].origin}}</h5>
+      </div>
+    {% endif %}
+    {% if wines[5] %}
+      <div class="product">
+        <a href="{{ wines[5].url }}">
+        <img src="{{wines[5].image_path}}" alt="">
+        </a>
+        <h2>{{wines[5].title}}</h2>
+        <h5>{{wines[5].origin}}</h5>
+      </div>
+    {% endif %}
+    {% if wines[6] %}
+      <div class="product">
+        <a href="{{ wines[6].url }}">
+        <img src="{{wines[6].image_path}}" alt="">
+        </a>
+        <h2>{{wines[6].title}}</h2>
+        <h5>{{wines[6].origin}}</h5>
+      </div>
+    {% endif %}
+    <img class="breakout" src="{{page.second_image_path}}" alt="">
+    {% if wines[7] %}
+      <div class="product">
+        <a href="{{ wines[7].url }}">
+        <img src="{{wines[7].image_path}}" alt="">
+        </a>
+        <h2>{{wines[7].title}}</h2>
+        <h5>{{wines[7].origin}}</h5>
+      </div>
+    {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="cta">
+    <div class="container">
+      <div class="buttons">
+        <a class="no-smoothState" target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store">find a store</button></a>
+      </div>
+    </div>
+  </section>
+
+</main>

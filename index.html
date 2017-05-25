@@ -1,0 +1,148 @@
+---
+layout: default
+<!-- class: home -->
+top_image:
+  image_path: /assets/images/home-3.jpg
+favorites:
+  image_path: /assets/images/home-fav.jpg
+  headline: all your favorites
+  subhead: Anything but Basic.
+  text: Good taste is your call. It's something you wear proudly and pour boldly. It's your own personal flavor. And it looks amazing.
+winemaker:
+  image_path: https://placehold.it/822x1140/cccccc/cccccc?text=fpo
+  headline: behind the scenes
+  subhead: The Winemaker
+  text: From harvesting and crushing to blending and aging, Margaret Leonardi makes sure every batch, every bottle, every sip of LBD looks and tastes its absolute best.
+middle_image:
+  image_path: /assets/images/home-2.jpg
+quote:
+  image_path: https://placehold.it/477x405/cccccc/cccccc?text=fpo
+wines:
+  - chardonnay
+  - pinot-noir
+  - cabernet-sauvignon
+bottom-image:
+  image_path: /assets/images/home-1.jpg
+description: Approachable, affordable, and delicious wines for every occasion.
+---
+
+
+<div id="agemodal" class="agemodal">
+  <div class="overlay"></div>
+  <div class="message">
+    <img src="/assets/images/logo-dark.png" alt="">
+    <p>You must be 21 years old to view this site. Please verify your age.</p>
+    <form id="agegate" method="post" action="">
+      <div class="submit">
+        <a id="formsubmit" class="formsubmit no-smoothState" data-submit="post"><h5>I am at least 21 years old</h5></a>
+      </div>
+    </form>
+  </div>
+</div>
+<!--  setviewport v1.00, by Joe Komenda (Komejo). Copyright 2013, MIT Licence.
+
+  This script looks for a cookie, using the function readCookie().
+  If it does not find it (or it is expired), it calls a modal
+  window (id = agemodal). If you correctly submit the form,
+  it sets the cookie 'jqverify' with the appropriate expiry. -->
+
+<main id="home" class="home scene_element scene_element--fadein">
+
+<section class="top-image">
+  <div class="container">
+    <img src="{{ page.top_image.image_path }}" />
+    <div class="headline">
+      <p class="top">Latest</p>
+      <p class="bottom">Obsession</p>
+    </div>
+  </div>
+</section>
+
+<section id="home-favorites" class="text-image favorites">
+  <div class="container">
+    <div class="text desktop">
+      <div class="wrapper">
+        <h4>{{ page.favorites.headline }}</h4>
+        <h3>{{ page.favorites.subhead }}</h3>
+        <p class="graph">{{ page.favorites.text }}</p>
+        <a href="/wines"><button class="more">Learn More</button></a>
+      </div>
+    </div>
+    <div class="image"><img id="favImage" src="{{ page.favorites.image_path }}" alt=""></div>
+    <div class="text mobile">
+      <div class="wrapper">
+        <h4>{{ page.favorites.headline }}</h4>
+        <h3>{{ page.favorites.subhead }}</h3>
+        <p class="graph">{{ page.favorites.text }}</p>
+        <a href="/wines"><button class="more">Learn More</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="middle-image">
+  <div class="container">
+    <img src="{{ page.middle_image.image_path }}" />
+  </div>
+</section>
+
+<section class="text-image winemaker">
+  <div class="container">
+    <div class="image"><img id="makerImage" src="{{ page.winemaker.image_path }}" alt=""></div>
+    <div class="text">
+      <div class="wrapper">
+        <h4>{{ page.winemaker.headline }}</h4>
+        <h3>{{ page.winemaker.subhead }}</h3>
+        <p class="graph">{{ page.winemaker.text }}</p>
+        <a href="/about"><button class="more">Learn More</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <div class="quote-wrapper">
+      <img src="{{page.quote.image_path}}" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <h3>Top Sellers</h3>
+    {% for seller in page.wines %}
+      {% for item in site.wines %}
+        {% if seller == item.slug %}
+        <div class="product">
+          <a href="{{ item.url }}">
+          <img src="{{item.image_path}}" alt="">
+          </a>
+          <h2>{{item.title}}</h2>
+          <h5>{{item.origin}}</h5>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+  <div class="buttons mobile">
+    <a href="/wines"><button class="all">view all</button></a><br /><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store no-smoothState">find a store</button></a>
+  </div>
+    <div class="buttons desktop">
+      <a href="/wines"><button class="all">view all</button></a><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store no-smoothState">find a store</button></a>
+    </div>
+  </div>
+</section>
+
+<section class="bottom-image">
+  <div class="container">
+    <img src="{{ page.bottom-image.image_path }}" />
+  </div>
+</section>
+
+</main>
+

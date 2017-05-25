@@ -1,0 +1,90 @@
+---
+layout: default
+---
+
+<main id="wine">
+
+  <section class="featured">
+    <div class="container">
+
+      <div class="image mobile">
+        <img src="{{ page.image_path }}" alt="">
+      </div>
+
+      <div class="info">
+        <div class="name">
+          <h3>{{ page.name }}</h3>
+          <h4>{{ page.origin }}</h4>
+        </div>
+        <div class="description">
+          <h4 class="desktop">description</h4>
+          <div class="wrapper">
+            {{ page.content }}
+          </div>
+        </div>
+
+          <div data-accordion-group>
+          <div class="notes">
+            <div class="accordion" data-accordion>
+              <div data-control><h4>technical notes</h4></div>
+              <div data-content>
+                <p>Total Acidity: {{ page.total_acidity }}</p>
+                <p>pH: {{ page.ph }}</p>
+                <p>Residual Sugar: {{ page.residual_sugar }}</p>
+                <p>alcohol: {{ page.alcohol }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="varietal">
+            <div class="accordion" data-accordion>
+              <div data-control><h4>varietal breakdown</h4></div>
+              <div data-content>
+                <div class="wrapper">
+                  <p>{{ page.varietal_breakdown }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        {% if page.purchase_link %}
+        <div class="shop">
+          <a target="_blank" href="{{ page.purchase_link }}"><button class="store">shop online</button></a>
+        </div>
+        {% endif %}
+
+
+      </div>
+      <div class="image desktop">
+        <img src="{{ page.image_path }}" alt="">
+      </div>
+    </div>
+  </section>
+
+{% assign wines = site.wines %}
+{% assign wines = wines|sort: 'sort_order' %}
+  <section class="all">
+    <div class="container">
+      <h2>All Wines</h2>
+      {% for wine in wines %}
+      <div class="product">
+        <a href="{{ wine.url }}">
+        <img src="{{wine.image_path}}" alt="">
+        </a>
+        <h2>{{wine.title}}</h2>
+        <h5>{{wine.origin}}</h5>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="buttons">
+        <a href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855"><button class="store">find a store</button></a>
+      </div>
+    </div>
+  </section>
+
+</main>

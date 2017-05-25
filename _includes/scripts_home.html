@@ -1,0 +1,69 @@
+<script>
+
+enquire.register("screen and (max-width: 768px)", {
+    match : function() {
+
+      $(function() {
+        // on load
+        // console.log('up to 768px wide');
+
+        // on resize
+      });
+    },
+    unmatch : function() {
+    }
+  })
+  .register("screen and (min-width: 769px)", {
+    match : function() {
+      var windowWidth = $(window).width(); // for resize below
+      $(function() {
+        // on load
+
+        // do layout calculations
+
+        $('.favorites').imagesLoaded( function() {
+          var favImage = $('#favImage');
+          var favImageHeight = favImage.height();
+          var favText = $('.favorites .wrapper');
+          var makerImage = $('#makerImage');
+          var makerImageHeight = makerImage.height();
+          var makerText = $('.winemaker .wrapper');
+
+          favImage.parent().prev().height(favImageHeight);
+          makerImage.parent().next().height(makerImageHeight);
+
+          setTimeout(function(){
+            favText.fadeTo(400, 1);
+            makerText.fadeTo(400, 1);
+          }, 100);
+        });
+
+
+
+
+
+
+
+        // on resize --> prob don't need fade behavior at all, just redo positioning
+        window.onresize = debounce(function(){
+          if ($(window).width() != windowWidth) {
+            var favImage = $('#favImage');
+            var favImageHeight = favImage.height();
+            var makerImage = $('#makerImage');
+            var makerImageHeight = makerImage.height();
+            favImage.parent().prev().height(favImageHeight);
+            makerImage.parent().next().height(makerImageHeight);
+          }
+        }, 100);
+
+      });
+    },
+    unmatch : function() {
+    }
+  });
+
+
+
+
+
+</script>

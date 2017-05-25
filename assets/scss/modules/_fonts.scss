@@ -1,0 +1,148 @@
+h1 {
+  font-family: ITCBodoni72Com-Bold, serif;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #000000;
+  font-size: 42px;
+}
+
+h2 {
+  font-family: ITCBodoni72Com-BookItalic, serif;
+  @include media($s){
+    font-size: 32px;
+  }
+  @include media($l){
+    font-size: 24px;
+  }
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+h3  {
+  font-family: ITCBodoni72Com-Bold, serif;
+  @include media($s){
+    font-size: 38px;
+    text-align: center;
+  }
+  @include media($l){
+    font-size: 34px;
+    text-align: left;
+  }
+  text-transform: none;
+  letter-spacing: 2px;
+  margin: 0px;
+  color: #000000;
+}
+
+h4 {
+  font-family: AvenirLTStd-Black, sans-serif;
+  @include media($s){
+    font-size: 15px;
+    text-align: center;
+  }
+  @include media($l){
+    font-size: 12px;
+    text-align: left;
+  }
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0px;
+  color: #000000;
+
+}
+
+h5 {
+  font-family: AvenirLTStd-Black, sans-serif;
+  @include media($s){
+    font-size: 14px;
+  }
+  @include media($l){
+    font-size: 10px;
+  }
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+p {
+  @include media($s){
+    font-size: 18px;
+  }
+  @include media($l){
+    font-size: 16px;
+  }
+}
+
+button {
+  font-family: AvenirLTStd-Black, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #000000;
+}
+
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3236012, 2016-06-21T17:18:09-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: ITCBodoni72Com-BookItalic by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-bodoni-seventytwo/bodoni-seventytwo-itc-book-italic/
+ * Copyright: Part of this font software is copyrighted &#x00A9; 2006 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. (c) Copyright
+ * Licensed pageviews: 500,000
+ *
+ * Webfont: ITCBodoni72Com-Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/itc-bodoni-seventytwo/bodoni-seventytwo-itc-bold/
+ * Copyright: Part of this font software is copyrighted &#x00A9; 2006 Linotype GmbH, www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype GmbH. (c) Copyright
+ * Licensed pageviews: 500,000
+ *
+ * Webfont: AvenirLTStd-Medium by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
+ * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ * Licensed pageviews: 250,000
+ *
+ * Webfont: AvenirLTStd-Book by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 250,000
+ *
+ * Webfont: AvenirLTStd-Black by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * Licensed pageviews: 250,000
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3236012
+ *
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3160ac");
+
+
+@font-face {font-family: 'ITCBodoni72Com-BookItalic';src: url('/assets/fonts/3160AC_0_0.eot');src: url('/assets/fonts/3160AC_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/3160AC_0_0.woff2') format('woff2'),url('/assets/fonts/3160AC_0_0.woff') format('woff'),url('/assets/fonts/3160AC_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'ITCBodoni72Com-Bold';src: url('/assets/fonts/3160AC_1_0.eot');src: url('/assets/fonts/3160AC_1_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/3160AC_1_0.woff2') format('woff2'),url('/assets/fonts/3160AC_1_0.woff') format('woff'),url('/assets/fonts/3160AC_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirLTStd-Medium';src: url('/assets/fonts/3160AC_2_0.eot');src: url('/assets/fonts/3160AC_2_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/3160AC_2_0.woff2') format('woff2'),url('/assets/fonts/3160AC_2_0.woff') format('woff'),url('/assets/fonts/3160AC_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirLTStd-Book';src: url('/assets/fonts/3160AC_3_0.eot');src: url('/assets/fonts/3160AC_3_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/3160AC_3_0.woff2') format('woff2'),url('/assets/fonts/3160AC_3_0.woff') format('woff'),url('/assets/fonts/3160AC_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'AvenirLTStd-Black';src: url('/assets/fonts/3160AC_4_0.eot');src: url('/assets/fonts/3160AC_4_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/3160AC_4_0.woff2') format('woff2'),url('/assets/fonts/3160AC_4_0.woff') format('woff'),url('/assets/fonts/3160AC_4_0.ttf') format('truetype');}

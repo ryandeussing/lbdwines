@@ -1,0 +1,61 @@
+version: 3.1.6
+
+title: Little Black Dress Wines
+description:
+url: http://www.ldbwines.com
+
+collections:
+  wines:
+    output: true
+    permalink: /wines/:slug/
+  partners:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: wines
+    values:
+      class: wine
+      layout: wine
+  -
+    scope:
+      path: "/wines/index.html"
+    values:
+      class: wines
+      layout: default
+  -
+    scope:
+      path: "/terms/index.html"
+    values:
+      class: terms
+      layout: default
+  -
+    scope:
+      path: "/supply-chain/index.html"
+    values:
+      class: supply
+      layout: default
+  -
+    scope:
+      path: "/partners/index.html"
+    values:
+      class: partners
+      layout: default
+  -
+    scope:
+      path: "/contact/index.html"
+    values:
+      class: contact
+      layout: default
+  -
+    scope:
+      path: "/about/index.html"
+    values:
+      class: about
+      layout: default
+
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag

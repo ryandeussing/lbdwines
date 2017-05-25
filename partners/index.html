@@ -1,0 +1,42 @@
+---
+title: Our Partners
+---
+
+<main id="partners" class="scene_element scene_element--fadein">
+
+  <section class="headline">
+    <div class="container">
+      <div class="inner">
+        <h1>Our Partners</h1>
+        <p class="editable">It’s an honor to work with true tastemakers who relentlessly  pursue worthy causes and create amazing ideas and products. </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="container">
+    {% assign partners = site.partners | sort:'order' %}
+    {% for partner in partners %}
+      <div class="partner">
+        <a target="_blank" href="{{partner.website}}">
+        <img src="{{partner.icon_path}}" alt="">
+        </a>
+        <h4>{{partner.name}}</h4>
+        <p>{{partner.info}}</p>
+        <p class="link"><a target="_blank" href="{{partner.website}}">{{partner.website}}</a></p>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="inquiry">
+        <h2>Partnership Inquiries</h2>
+        <p><a href="mailto:partnerships@lbdwines.com">partnerships@lbdwines.com</a></p>
+      </div>
+    </div>
+  </section>
+
+
+</main>

@@ -1,0 +1,86 @@
+<script>
+
+enquire.register("screen and (max-width: 768px)", {
+    match : function() {
+
+      $(function() {
+        // on load
+        // console.log('up to 768px wide');
+
+        // on resize
+      });
+    },
+    unmatch : function() {
+    }
+  })
+  .register("screen and (min-width: 769px)", {
+    match : function() {
+      var windowWidth = $(window).width(); // for resize below
+      $(function() {
+        // on load
+
+        // do layout calculations
+
+        $('.favorites').imagesLoaded( function() {
+          var wines = $('.product');
+          wines.fadeTo(400, 1);
+
+          var breakouts = $('.breakout');
+          var breakoutHeight = breakouts.eq(0).height();
+          var productHeight = $('.product').first().height();
+          console.log('product ' + productHeight);
+          console.log('image ' + breakoutHeight);
+          var pad = (breakoutHeight - productHeight) / 2;
+          console.log('pad ' + pad);
+
+          breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+          breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+        });
+
+
+
+        // setTimeout(function(){
+        //   favText.fadeTo(400, 1);
+        //   makerText.fadeTo(400, 1);
+        // }, 100);
+
+
+
+        // on resize --> prob don't need fade behavior at all, just redo positioning
+        window.onresize = debounce(function(){
+          if ($(window).width() != windowWidth) {
+            var breakouts = $('.breakout');
+            var breakoutHeight = breakouts.eq(0).height();
+            var productHeight = $('.product').first().height();
+            var pad = (breakoutHeight - productHeight) / 2;
+
+            breakouts.eq(0).prev().css({"margin-bottom": "0px", "padding-top": pad});
+            breakouts.eq(1).next().css({"margin-bottom": "0px", "padding-top": pad});
+          }
+        }, 100);
+
+      });
+    },
+    unmatch : function() {
+    }
+  });
+
+  // https://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
+
+</script>

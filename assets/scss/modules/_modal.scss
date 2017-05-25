@@ -1,0 +1,105 @@
+/* setviewport v1.00, by Joe Komenda (Komejo). Copyright 2013, MIT Licence.
+
+ Note: The CSS default to hide the content and the modal are
+ important to prevent circumvention via simply turning off
+ JavaScript.
+
+*/
+
+.agemodal {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  .overlay {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.5;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+  }
+  img {
+    @include media($s-up) {
+        width: 200px;
+    }
+    @include media($l-up) {
+        width: 318px;
+    }
+  }
+  .message {
+    text-align: center;
+    background: #f3f3f3;
+    bottom: 0;
+    @include media($s){
+      height: 220px;
+    }
+    @include media($l){
+      height: 330px;
+    }
+    /* Note: this has to be a set width */
+    left: 0;
+    margin: auto;
+    @include media($s){
+      padding: 2rem 1rem;
+    }
+    @include media($l){
+      padding: 4rem 4rem;
+    }
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include media($s){
+      width: 275px;
+    }
+    @include media($l){
+      width: 550px;
+    }
+    /* Note: this has to be a set height */
+    z-index: 1001;
+    p {
+      @include media($s){
+        font-size: 15px;
+        width: 80%;
+        margin: 1rem auto;
+      }
+      @include media($l){
+        font-size: 18px;
+        width: 60%;
+        margin: 2rem auto;
+      }
+    }
+  }
+  .submit {
+    text-align: center;
+    cursor: pointer;
+  }
+  h5 {
+    margin: 0;
+    @include media($s){
+      font-size: 10px;
+    }
+    @include media($l){
+      font-size: 10px;
+    }
+  }
+  .formsubmit {
+    @include transition(all .2s ease);
+    display: block;
+    margin: 0 auto;
+    padding: .75em 1em;
+    width: 230px;
+    background-color: #eed5d8;
+    border-radius: 0px;
+    &:hover {
+      opacity: .7;
+      color: #000000;
+    }
+  }
+}
+
+
+

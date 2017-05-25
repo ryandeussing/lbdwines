@@ -1,0 +1,437 @@
+#home {
+
+  section.top-image {
+    position: relative;
+    text-align: center;
+    @include media($l) {
+      padding-top: 45px;
+    }
+    .headline {
+      z-index: 100;
+      @include media($s){
+        display: inline-block;
+        text-align: center;
+        margin-top: 72px;
+        margin-bottom: 72px;
+        padding-bottom: .65rem;
+        border-bottom: 8px solid #dbb7bb;
+        .top {
+          font-family: ITCBodoni72Com-BookItalic;
+          font-size: 37px;
+          letter-spacing: 2px;
+          margin: 0px !important;
+        }
+        .bottom {
+          font-family: AvenirLTStd-Book;
+          font-size: 27px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin: 0px !important;
+        }
+      }
+      @include media($l){
+        position: absolute;
+        left: 17%;
+        right: none;
+        margin: 0;
+        @include center(y);
+        .top {
+          font-family: ITCBodoni72Com-BookItalic;
+          font-size: 42px;
+          letter-spacing: 2px;
+          margin: 0px !important;
+        }
+        .bottom {
+          font-family: AvenirLTStd-Book;
+          font-size: 30px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin: 0px !important;
+        }
+      }
+    }
+  }
+
+  section.favorites {
+
+    .image {
+      text-align: center;
+      @include media($s){
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 90px;
+      }
+      @include media($l){
+        @include span-columns(5);
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .text.mobile {
+      // @include span-columns(2);
+      // @include shift(1);
+      text-align: center;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      .wrapper {
+        // @include span-columns(3 of 5);
+        // @include vertical-align;
+        // opacity: 0;
+        h3 {
+          margin-top: 1rem;
+        }
+        p {
+          line-height: 1.7;
+          margin-top: 2rem;
+          margin-bottom: 54px;
+        }
+        button {
+          @include transition(all .2s ease);
+          margin-top: 0;
+          margin-bottom: 90px;
+          padding: 1.3em 1em;
+          width: 230px;
+          background-color: #eed5d8;
+          border-radius: 0px;
+          &:hover {
+            opacity: .7;
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    @include media($l-up){
+      margin-top: 135px;
+      .text.desktop {
+        @include span-columns(5);
+        @include shift(1);
+        .wrapper {
+          @include span-columns(4 of 5);
+          @include vertical-align;
+          // opacity: 0;
+          h3 {
+            margin-top: .75rem;
+          }
+          p {
+            line-height: 1.7;
+          }
+          button {
+            @include transition(all .2s ease);
+            margin-top: .5rem;
+            padding: 1.3em 1em;
+            width: 230px;
+            background-color: #eed5d8;
+            border-radius: 0px;
+            &:hover {
+              opacity: .7;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  section.middle-image {
+    @include media($s){
+      margin-bottom: 108px;
+    }
+    @include media($l) {
+      position: relative;
+      margin-top: 135px;
+      margin-bottom: 0px;
+    }
+  }
+
+  section.winemaker {
+    @include media($l-up){
+      margin-top: 135px;
+    }
+
+      .text {
+        @include media($s){
+          text-align: center;
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+          .wrapper {
+            h3 {
+              margin-top: 1rem;
+            }
+            p {
+              line-height: 1.7;
+              margin-top: 2rem;
+              margin-bottom: 54px;
+            }
+            button {
+              @include transition(all .2s ease);
+              margin-top: 0;
+              margin-bottom: 90px;
+              padding: 1.3em 1em;
+              width: 230px;
+              background-color: #eed5d8;
+              border-radius: 0px;
+              &:hover {
+                opacity: .7;
+                color: #000000;
+              }
+            }
+          }
+        }
+
+        @include media($l){
+          text-align: left;
+          animation: fadein 1s;
+          @include span-columns(5);
+          @include shift(1);
+          .wrapper {
+            animation: fadein 1s;
+            // @include span-columns(3 of 4);
+            @include vertical-align;
+            h3 {
+              margin-top: .75rem;
+            }
+            p {
+              line-height: 1.7;
+            }
+            button {
+              @include transition(all .2s ease);
+              margin-top: .5rem;
+              padding: 1.3em 1em;
+              width: 230px;
+              background-color: #eed5d8;
+              border-radius: 0px;
+              &:hover {
+                opacity: .7;
+                color: #000000;
+              }
+            }
+          }
+        }
+
+        @include media(1200px){
+          text-align: left;
+          animation: fadein 1s;
+          @include span-columns(4);
+          @include shift(1);
+          .wrapper {
+            animation: fadein 1s;
+            // @include span-columns(3 of 4);
+            @include vertical-align;
+            h3 {
+              margin-top: .75rem;
+            }
+            p {
+              line-height: 1.7;
+            }
+            button {
+              @include transition(all .2s ease);
+              margin-top: .5rem;
+              padding: 1.3em 1em;
+              width: 230px;
+              background-color: #eed5d8;
+              border-radius: 0px;
+              &:hover {
+                opacity: .7;
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+
+    .image {
+      text-align: center;
+      @include media($s){
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 90px;
+      }
+      @include media($l){
+        @include span-columns(4);
+        @include shift(1);
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+      }
+      @include media(1000px){
+        @include span-columns(5);
+        @include shift(1);
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  section.quote {
+    @include media($s){
+      display: none;
+    }
+    @include media($l-up){
+      display: block;
+      margin-top: 89px;
+      .quote-wrapper {
+        @include span-columns(3);
+        @include shift(6);
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  section.products {
+    @include media($s){
+    }
+    @include media($l-up){
+      margin-top: 135px;
+      margin-bottom: 70px;
+    }
+    h3 {
+      text-align: center;
+      @include media($s){
+        margin-bottom: 45px;
+      }
+      @include media($l){
+        margin-bottom: 72px;
+      }
+    }
+    h2 {
+      @include media($s){
+        margin-top: 45px;
+      }
+      @include media($l){
+        margin-top: 22px;
+      }
+      margin-bottom: 0px;
+    }
+    h5 {
+      @include media($s){
+        margin-top: 18px;
+        margin-bottom: 90px;
+      }
+      @include media($l){
+        margin-top: 12px !important;
+        margin-bottom: 1rem;
+      }
+    }
+    .product {
+      @include media($s){
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      @include media($l-up){
+        padding-left: 0px;
+        padding-right: 0px;
+        @include span-columns(4);
+      }
+      img {
+        display: block;
+      }
+      a {
+        @include transition(all .2s ease);
+      }
+      a img:hover {
+        @include transition(all .2s ease);
+        opacity: .7;
+      }
+    }
+  }
+
+  section.cta {
+    @include media($s-up){
+      .buttons {
+        // @include span-columns(12);
+        // @include shift(3);
+        text-align: center;
+        .all {
+          @include transition(all .2s ease);
+          margin-top: .5rem;
+          // margin-left: 27px;
+          margin-bottom: 12px;
+          padding: 1.3em 1em;
+          width: 230px;
+          background-color: #eed5d8;
+          border-radius: 0px;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+            color: #000000;
+          }
+        }
+        .store {
+          @include transition(all .2s ease);
+          margin-top: .5rem;
+          // margin-left: 27px;
+          // margin-right: 27px;
+          padding: 1em 1em;
+          width: 230px;
+          background-color: transparent;
+          border: 3px solid #dbb7bb;
+          border-radius: 0px;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+            color: #000000;
+          }
+        }
+      }
+    }
+    @include media($l-up){
+      margin-bottom: 135px;
+      .buttons {
+        @include span-columns(12);
+        // @include shift(3);
+        text-align: center;
+        .all {
+          @include transition(all .2s ease);
+          margin-top: 0px;
+          margin-bottom: 0px;
+          // margin-left: 27px;
+          margin-right: 27px;
+          padding: 1.3em 1em;
+          width: 230px;
+          background-color: #eed5d8;
+          border-radius: 0px;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+            color: #000000;
+          }
+        }
+        .store {
+          @include transition(all .2s ease);
+          margin-top: 0;
+          // margin-left: 27px;
+          // margin-right: 27px;
+          padding: 1em 1em;
+          width: 230px;
+          background-color: transparent;
+          border: 3px solid #dbb7bb;
+          border-radius: 0px;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  section.bottom-image {
+    @include media($s){
+      margin-bottom: 108px;
+      margin-top: 108px;
+    }
+    @include media($l-up) {
+      position: relative;
+      margin-top: 135px;
+    }
+  }
+
+}

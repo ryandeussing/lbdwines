@@ -1,0 +1,84 @@
+
+// apply padding to major page elements at s/m/l (not xl)
+// other elements will be full-width by default
+
+// FYI
+// $s: em(100);
+// $m: em(500);
+// $l: em(769);
+// $xl: em(1200);
+// $xxl: em(1600);
+
+main {
+  text-align: left;
+  @include container();
+  @include media($s) {
+    @include pad(0);
+  }
+  @include media($l) {
+    @include pad(1rem);
+  }
+  @include media(1400px) {
+    @include pad(0);
+  }
+}
+
+// remove padding except at top, sides, bottom of window
+
+header {
+  padding-bottom: 0;
+  @include media($s-up) {
+    @include pad(0 1rem);
+  }
+  @include media(1400px) {
+    @include pad(0);
+  }
+}
+
+main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// utitlity classes
+
+.mobile {
+  @include media($s-up) {
+    display: inherit !important;
+  }
+  @include media($m-up) {
+    display: inherit !important;
+  }
+  @include media($l-up) {
+    display: none !important;
+  }
+  @include media($xl-up) {
+    display: none !important;
+  }
+}
+
+.desktop {
+  @include media($s-up) {
+    display: none !important;
+  }
+  @include media($m-up) {
+    display: none !important;
+  }
+  @include media($l-up) {
+    display: inherit !important;
+  }
+  @include media($xl-up) {
+    display: inherit !important;
+  }
+}
+
+
+
+
+
+

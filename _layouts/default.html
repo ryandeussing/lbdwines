@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{% if page.class %}{{ page.class }}{% endif %}">
+
+  <div id="main" class="m-scene">
+
+    {% include header.html %}
+
+
+      {{ content }}
+
+
+    {% include footer.html %}
+
+  </div>
+
+  <!-- JS -->
+  <!-- inject:js -->
+  <!-- endinject -->
+
+
+  </body>
+
+
+</html>

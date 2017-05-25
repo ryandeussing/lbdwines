@@ -1,0 +1,92 @@
+<script>
+
+enquire.register("screen and (max-width: 768px)", {
+    match : function() {
+
+      $(function() {
+        // on load
+        // console.log('up to 768px wide');
+
+        // on resize
+      });
+    },
+    unmatch : function() {
+    }
+  })
+  .register("screen and (min-width: 769px)", {
+    match : function() {
+      var windowWidth = $(window).width(); // for resize below
+      $(function() {
+        // on load
+
+        // do layout calculations
+
+        $('.winemaker').imagesLoaded( function() {
+          var makerImageDiv = $('.winemaker .image');
+          var makerImageDivHeight = makerImageDiv.height();
+          var makerTextDiv = $('.winemaker .text');
+          var makerTextDivHeight = $('.winemaker .text').height();
+
+          if (makerTextDivHeight > makerImageDivHeight) {
+            var pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+            makerImageDiv.css("padding-top", pad);
+            setTimeout(function(){
+              makerImageDiv.fadeTo(400, 1);
+              makerTextDiv.fadeTo(400, 1);
+            }, 100);
+          } else {
+            var pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+            makerTextDiv.css("padding-top", pad);
+            setTimeout(function(){
+              makerImageDiv.fadeTo(400, 1);
+              makerTextDiv.fadeTo(400, 1);
+            }, 100);
+          }
+        });
+
+
+        // on resize --> prob don't need fade behavior at all, just redo positioning
+        window.onresize = debounce(function(){
+          if ($(window).width() != windowWidth) {
+            var makerImageDiv = $('.winemaker .image');
+            var makerImageDivHeight = makerImageDiv.height();
+            var makerTextDiv = $('.winemaker .text');
+            var makerTextDivHeight = $('.winemaker .text').height();
+
+            var pad = 0;
+
+            if (makerTextDivHeight > makerImageDivHeight) {
+              pad = (makerTextDivHeight - makerImageDivHeight) / 2;
+              makerImageDiv.css("padding-top", pad);
+            } else {
+              pad = (makerImageDivHeight - makerTextDivHeight) / 2;
+              makerTextDiv.css("padding-top", pad);
+            }
+          }
+        }, 100);
+
+      });
+    },
+    unmatch : function() {
+    }
+  });
+
+  // https://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
+
+</script>

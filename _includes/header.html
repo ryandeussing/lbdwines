@@ -1,0 +1,24 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper container">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo.png" alt="Logo Image">
+    </a>
+    <a href="" class="navigation-menu-button no-smoothState" id="js-mobile-menu">
+      <button class="hamburger hamburger--squeeze" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </a>
+    <div class="store desktop"><a target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855">find a store</a></div><nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu">
+        <li class="nav-link{% if page.url == '/wines/' %} active{% endif %}"><a href="/wines">wines</a></li>
+        <li class="nav-link{% if page.url == '/about/' %} active{% endif %}"><a href="/about">about</a></li>
+        <li class="nav-link{% if page.url == '/partners/' %} active{% endif %}"><a href="/partners">partners</a></li>
+        <li class="nav-link{% if page.url == '/contact/' %} active{% endif %}"><a href="/contact">contact</a></li>
+        <li class="mobile find nav-link"><a class="no-smoothState" target="_blank" href="http://locator.banfi-hq.com/WineLocator/default.aspx?BCode=855">find a store</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+

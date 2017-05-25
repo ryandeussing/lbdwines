@@ -1,0 +1,271 @@
+.footer {
+  @include media($l-up){
+    margin-top: 135px;
+  }
+  @include media(min-width 100px max-width 1385px){
+    @include pad(0 1rem);
+  }
+  a {
+    @include transition(all .2s ease);
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+      @include transition(all .2s ease);
+      opacity: .7;
+    }
+  }
+  .search {
+    @include media($s){
+      text-align: center;
+      h2 {
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 45px;
+        padding-bottom: 45px;
+        padding-right: 25%;
+        padding-left: 25%;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        margin-top: 0px;
+        margin-bottom: 45px;
+      }
+    }
+    @include media($l-up){
+      @include span-columns(3);
+      text-align: left;
+      h2 {
+        display: block;
+        text-align: left;
+        padding-bottom: .75rem;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        // @include span-columns(1 of 3);
+        width: 49%;
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+    }
+  }
+  .buy {
+    @include media($s){
+      text-align: center;
+      h2 {
+        display: inline-block;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        padding-bottom: 45px;
+        padding-right: 25%;
+        padding-left: 25%;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        margin-top: 0px;
+        margin-bottom: 45px;
+      }
+    }
+    @include media($l-up){
+      text-align: left;
+      @include span-columns(3);
+      @include shift(1);
+      h2 {
+        display: block;
+        text-align: left;
+        padding-bottom: .75rem;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        // @include span-columns(1 of 3);
+        width: 49%;
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+    }
+  }
+  .social {
+    @include media($s){
+      text-align: center;
+      h2 {
+        display: inline-block;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        padding-bottom: 45px;
+        padding-right: 25%;
+        padding-left: 25%;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        margin-top: 0px;
+        margin-bottom: 45px;
+      }
+      i {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 27px;
+      }
+    }
+    @include media($l-up){
+      @include span-columns(3);
+      @include shift(1);
+      text-align: left;
+      h2 {
+        display: block;
+        text-align: left;
+        padding-bottom: .75rem;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #000000;
+      }
+      h5 {
+        // @include span-columns(1 of 3);
+        width: 49%;
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      i {
+        margin-left: 0px;
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+footer {
+  @include media($s){
+    margin-top: 108px;
+    text-align: center;
+    padding-top: 5px !important;
+    padding-bottom: 18px !important;
+  }
+  @include media($l){
+    margin-top: 50px;
+    text-align: left;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  background: #000000;
+  font-family: AvenirLTStd-Book;
+  letter-spacing: 2px;
+  color: white;
+  @include media(min-width 100px max-width 1385px){
+    @include pad(0 1rem);
+  }
+  .copyright {
+    @include media($s){
+      height: 45px;
+      text-align: center;
+      p {
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0px;
+        margin-top: 2px;
+        @include vertical-align;
+      }
+    }
+    @include media($l-up){
+      display: inline-block;
+      height: 45px;
+      float: left;
+      p {
+        font-size: 10px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0px;
+        margin-top: 2px;
+        @include vertical-align;
+      }
+      span {
+        display: inline !important;
+      }
+    }
+  }
+  .terms, .supply {
+    @include media($s-up){
+      height: 45px;
+      display: block;
+      // height: 45px;
+      // margin-left: 3rem;
+      text-align: center;
+      p {
+        margin: 0px;
+        margin-top: 2px;
+        font-size: 12px;
+        line-height: 10px;
+        @include vertical-align;
+        a {
+          @include transition(all .2s ease);
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+          &:hover {
+            @include transition(all .2s ease);
+            opacity: .7;
+          }
+        }
+      }
+    }
+    @include media($l-up){
+      display: inline-block;
+      height: 45px;
+      margin-left: 3rem;
+      float: right;
+      p {
+        margin: 0px;
+        margin-top: 2px;
+        font-size: 10px;
+        line-height: 10px;
+        @include vertical-align;
+        a {
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .terms {
+    @include media($s){
+      // margin-top: 1.5rem;
+    }
+    @include media($l){
+      margin-top: 0;
+    }
+  }
+  .supply {
+    @include media($s){
+      // margin-top: 1.5rem;
+    }
+    @include media($l){
+      margin-top: 0;
+    }
+  }
+
+
+
+}
+
+
